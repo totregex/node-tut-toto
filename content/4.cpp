@@ -2,39 +2,7 @@
 using namespace std;
 class Solution{
 public:
-//     int lengthOfLongestSubstring(string s){
-//         if(s=="") return 0;
-//         (s.length()==1) return 1;
-//         int cnt=0, mx=0;
-//         map<char,int>mp;
-//         int i=0;
-//         while(i<s.length()){
-//             if(mp[s[i]]!=1){
-//                 ++mx;
-//                 mp[s[i]]=1;
-//                 ++i;
-//             }
-//             else if(mp[s[i]]==1){
-//                 mp.clear();
-//                 mx=0;
-//                 char c=s[i];
-//                 while(i>=0 && s[i-1]!=c){
-//                     --i;
-//                 }
-//             }
-//             cnt=max(cnt,mx);
-//         }
-//         return cnt;
-//     }
-//     int maxsum(int* arr,int n){
-//         int sum=0,mx=0;
-//         for(int i=0;i<n;i++){
-//             mx+=arr[i];
-//             sum=max(mx,sum);
-//             if(mx<0) mx=0;
-//         }
-//         return sum;
-//     }
+
 };
 void sort(int* arr,int n){
     for(int i=n-1;i>0;i--){
