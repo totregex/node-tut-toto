@@ -4,7 +4,7 @@ class Solution{
 public:
 //     int lengthOfLongestSubstring(string s){
 //         if(s=="") return 0;
-//         if(s.length()==1) return 1;
+//         (s.length()==1) return 1;
 //         int cnt=0, mx=0;
 //         map<char,int>mp;
 //         int i=0;
