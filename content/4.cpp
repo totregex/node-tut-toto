@@ -732,44 +732,37 @@ int longest(vector<int>&nums){
     return mx;
 }
 
-// int longest(std::vector<int>& nums) {
-//     if (nums.empty()) {
-//         return 0; // Handle the case where the vector is empty
-//     }
-
-//     int n = nums.size();
-//     std::vector<int> lis; // Longest Increasing Subsequence array
-
-//     for (int i = 0; i < n; ++i) {
-//         auto it = std::lower_bound(lis.begin(), lis.end(), nums[i]);
-//         if (it == lis.end()) {
-//             lis.push_back(nums[i]);
-//         } else {
-//             *it = nums[i];
-//         }
-//     }
-
-//     return lis.size();
-// }
-
+int hcf(int a,int b){
+    if(b==0) return a;
+    return hcf(b,a%b);
+}
+void chimkandu(int arr[][3],int m,int n){
+    vector<int>rows(m,0),cols(n,0);
+    for(int i=0;i<m;i++){
+        for(int j=0;j<n;j++){
+            if(arr[i][j]){
+                cols[j]++;
+                rows[i]++;
+            }
+        }
+    }
+    for(int i=0;i<m;i++){
+        for(int j=0;j<n;j++){
+            if(arr[i][j]){
+                if(cols[j]<2 && rows[i]<2){
+                cout<<i<<" "<<j<<endl;
+            }
+            }
+        }
+    }
+}
 int main(){
-    vector<int> vec={4,3,2,5,6,7,8,9,4,5,6,7,2,3,4,0,1,2,3,4,5,6};
-    cout<<longest(vec);
-    // int k=9;
-    // cout<<&k<<endl;
-    // help(k,4);
-    // cout<<&k<<endl;
-    // cout<<k;
-
-    // reverse(vec.end()-2,vec.end());
-    // reverse(vec.begin(),vec.end()-2);
-    // reverse(vec.begin(),vec.end());
-    // for(auto i:vec) cout<<i<<" ";
-    // vector<vector<int>>board={{1,1,1,1},{1,0,0,0},{1,1,1,1},{1,1,1,1}};
-    // vector<string>ans=rat(board);
-    // for(auto i:ans){
-    //     cout<<"["<<i<<"] ";
-    // }
+    int arr[3][3]={
+        {1,0,0},
+        {1,0,0},
+        {0,1,0}
+    };
+    chimkandu(arr,3,3);
     // vector<vector<vector<int>>> ans=nqueen(2);
     // for(auto vec:ans){
     //     for(auto out:vec){
